@@ -1,0 +1,22 @@
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    max-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-content{
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat;
+}
+.item-content {
+  background-color: #FFFFFF;
+}
+
+.row {
+    margin-bottom: 15px;
+}    
+
+.content-block-title{
+    font-size: large;
+}
