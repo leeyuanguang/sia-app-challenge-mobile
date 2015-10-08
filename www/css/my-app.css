@@ -20,3 +20,12 @@
 .content-block-title{
     font-size: large;
 }
+
+.cart-notification .item-content{
+    color:#FFFFFF;
+    background-color: #041D43;
+}
+
+.cart-notification .item-content .item-inner .item-after a{
+    color:#FFFFFF;
+}

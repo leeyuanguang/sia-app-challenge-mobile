@@ -280,8 +280,8 @@ myApp.onPageInit('krisair-category-listing', function (page) {
             message: 'Item added to cart.'
         });
         setTimeout(function () {
-            myApp.closeNotification("cart-notification");
-        }, 2000);
+            myApp.closeNotification(".cart-notification");
+        }, 3000);
     });
 });
 
