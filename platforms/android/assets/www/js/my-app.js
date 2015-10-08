@@ -17,6 +17,7 @@ var rightView = myApp.addView('.view-right', {
 
 // Login events 
 myApp.onPageInit('login', function (page) {
+    window.analytics.trackView('login');
     $$(page.container).find('.button').on('click', function () {
         var username = $$(page.container).find('input[name="username"]').val();
         var password = $$(page.container).find('input[name="password"]').val();
@@ -117,15 +118,6 @@ myApp.onPageInit('inflight-menu', function (page) {
             }, 2800);
             myApp.alert('Our flight attendants will be with you shortly.');
         });
-    });
-});
-
-myApp.onPageInit('krisair-beauty-detail', function (page) {
-    $$('.inflight-order-prompt').on('click', function () {
-        myApp.showIndicator();
-        setTimeout(function () {
-            myApp.hideIndicator();
-        }, 500);
     });
 });
 
@@ -280,8 +272,15 @@ myApp.onPageInit('krisair-category-listing', function (page) {
             message: 'Item added to cart.'
         });
         setTimeout(function () {
-            myApp.closeNotification("cart-notification");
-        }, 2000);
+            myApp.closeNotification(".cart-notification");
+        }, 3000);
+    });
+    
+    $$('.checkout-press').on('click', function () {
+        myApp.showIndicator();
+        setTimeout(function () {
+            myApp.hideIndicator();
+        }, 3500);
     });
 });
 
@@ -354,6 +353,7 @@ $(function () {
 });
 document.addEventListener("deviceready", function () {
     cordovaReady.resolve();
+    window.analytics.startTrackerWithId('UA-XXXX-YY');
 }, false);
 
 $.when(jqueryReady, cordovaReady).done(function () {
