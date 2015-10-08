@@ -29,3 +29,12 @@
 .cart-notification .item-content .item-inner .item-after a{
     color:#FFFFFF;
 }
+
+.qr-notification .item-content{
+    color:#FFFFFF;
+    background-color: #041D43;
+}
+
+.qr-notification .item-content .item-inner .item-after a{
+    color:#FFFFFF;
+}

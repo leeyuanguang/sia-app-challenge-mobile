@@ -30,7 +30,7 @@ myApp.onPageInit('login', function (page) {
             setTimeout(function () {
                 myApp.hidePreloader();
             }, 1800);
-            myApp.alert('Welcome Jason!', function () {
+            myApp.alert('Welcome Mr. Donald!', function () {
                 //mainView.router.back();
                 mainView.router.loadPage("index-logged-in.html");
             });
@@ -274,7 +274,7 @@ myApp.onPageInit('krisair-category-listing', function (page) {
             myApp.closeNotification(".cart-notification");
         }, 3000);
     });
-    
+
     $$('.checkout-press').on('click', function () {
         myApp.showIndicator();
         setTimeout(function () {
@@ -362,21 +362,23 @@ $.when(jqueryReady, cordovaReady).done(function () {
                     qrCodeResult = result.text;
                     var found = false;
                     if (qrCodeResult != "") {
-                        myApp.addNotification({
-                            additionalClass: "qr-notification",
-                            message: 'QR code recognized'
-                        });
-                        setTimeout(function () {
-                            myApp.closeNotification(".qr-notification");
-                        }, 3000);
+//                        if (qrCodeResult == "siaappchallenge") {
+//                        myApp.addNotification({
+//                            additionalClass: "qr-notification",
+//                            message: 'QR code recognized'
+//                        });
+//                        setTimeout(function () {
+//                            myApp.closeNotification(".qr-notification");
+//                        }, 3000);
+//                        mainView.router.loadPage("krisair_f1collectibles_earpiece.html");
                     } else {
-                        myApp.addNotification({
-                            additionalClass: "qr-notification",
-                            message: 'QR code not recognized'
-                        });
-                        setTimeout(function () {
-                            myApp.closeNotification(".qr-notification");
-                        }, 3000);
+//                        myApp.addNotification({
+//                            additionalClass: "qr-notification",
+//                            message: 'QR code not recognized'
+//                        });
+//                        setTimeout(function () {
+//                            myApp.closeNotification(".qr-notification");
+//                        }, 3000);
                     }
                 },
                 function (error) {
