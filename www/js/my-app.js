@@ -17,7 +17,7 @@ var rightView = myApp.addView('.view-right', {
 
 // Login events 
 myApp.onPageInit('login', function (page) {
-    window.analytics.trackView('login');
+    cordova.plugins.analytics.trackView('login');
     $$(page.container).find('.button').on('click', function () {
         var username = $$(page.container).find('input[name="username"]').val();
         var password = $$(page.container).find('input[name="password"]').val();
@@ -353,25 +353,25 @@ $(function () {
 });
 document.addEventListener("deviceready", function () {
     cordovaReady.resolve();
-    window.analytics.startTrackerWithId('UA-68533977-1');
+    cordova.plugins.analytics.startTrackerWithId('UA-68533977-1');
     
-    window.analytics.trackView('Homepage');
+    cordova.plugins.analytics.trackView('Homepage');
     
-    window.analytics.trackEvent('Category', 'Action', 'Label', 1);
+    cordova.plugins.analytics.trackEvent('Category', 'Action', 'Label', 1);
     
-    window.analytics.trackException('Description', true);
+    cordova.plugins.analytics.trackException('Description', true);
     
-    window.analytics.trackTiming('Category', 1000, 'Variable', 'Label');
+    cordova.plugins.analytics.trackTiming('Category', 1000, 'Variable', 'Label');
     
-    window.analytics.addTransaction('ID', 'Affiliation', 1, 1, 1, 'Currency Code');
+    cordova.plugins.analytics.addTransaction('ID', 'Affiliation', 1, 1, 1, 'Currency Code');
     
-    window.analytics.addTransactionItem('ID', 'Name', 'SKU', 'Category', 1, 1, 'Currency Code');
+    cordova.plugins.analytics.addTransactionItem('ID', 'Name', 'SKU', 'Category', 1, 1, 'Currency Code');
     
-    window.analytics.addCustomDimension('Key', 'Value', success, error);
+    cordova.plugins.analytics.addCustomDimension('Key', 'Value', success, error);
     
-    window.analytics.setUserId('1');
+    cordova.plugins.analytics.setUserId('1');
     
-    window.analytics.debugMode();
+    cordova.plugins.analytics.debugMode();
 }, false);
 
 $.when(jqueryReady, cordovaReady).done(function () {

@@ -356,7 +356,22 @@ document.addEventListener("deviceready", function () {
     window.analytics.startTrackerWithId('UA-68533977-1');
     
     window.analytics.trackView('Homepage');
-
+    
+    window.analytics.trackEvent('Category', 'Action', 'Label', 1);
+    
+    window.analytics.trackException('Description', true);
+    
+    window.analytics.trackTiming('Category', 1000, 'Variable', 'Label');
+    
+    window.analytics.addTransaction('ID', 'Affiliation', 1, 1, 1, 'Currency Code');
+    
+    window.analytics.addTransactionItem('ID', 'Name', 'SKU', 'Category', 1, 1, 'Currency Code');
+    
+    window.analytics.addCustomDimension('Key', 'Value', success, error);
+    
+    window.analytics.setUserId('1');
+    
+    window.analytics.debugMode();
 }, false);
 
 $.when(jqueryReady, cordovaReady).done(function () {
