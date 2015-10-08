@@ -9,8 +9,12 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<feature name=\"Globalization\"><param name=\"android-package\" value=\"org.apache.cordova.globalization.Globalization\" /></feature>",
@@ -53,11 +57,16 @@
             },
             "AndroidManifest.xml": {
                 "parents": {
-                    "/manifest": [],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "count": 1
+                        }
+                    ],
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 5
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
@@ -112,7 +121,7 @@
                     "/*": [
                         {
                             "xml": "<preference name=\"AndroidPersistentFileLocation\" value=\"Internal\" />",
-                            "count": 2
+                            "count": 1
                         }
                     ]
                 }
@@ -125,6 +134,9 @@
         }
     },
     "installed_plugins": {
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.coolappz.SIA_App_Challenge_Mobile"
+        },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.coolappz.SIA_App_Challenge_Mobile"
         },
