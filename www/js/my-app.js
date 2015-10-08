@@ -362,11 +362,21 @@ $.when(jqueryReady, cordovaReady).done(function () {
                     qrCodeResult = result.text;
                     var found = false;
                     if (qrCodeResult != "") {
-                        alert("QR Code found: " + qrCodeResult);
-                        var SKU = qrCodeResult;
-                        qrCodeResult = "";
+                        myApp.addNotification({
+                            additionalClass: "qr-notification",
+                            message: 'QR code recognized'
+                        });
+                        setTimeout(function () {
+                            myApp.closeNotification(".qr-notification");
+                        }, 3000);
                     } else {
-                        alert("QR Code not found.");
+                        myApp.addNotification({
+                            additionalClass: "qr-notification",
+                            message: 'QR code not recognized'
+                        });
+                        setTimeout(function () {
+                            myApp.closeNotification(".qr-notification");
+                        }, 3000);
                     }
                 },
                 function (error) {
