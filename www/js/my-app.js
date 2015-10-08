@@ -353,7 +353,10 @@ $(function () {
 });
 document.addEventListener("deviceready", function () {
     cordovaReady.resolve();
-    window.analytics.startTrackerWithId('UA-XXXX-YY');
+    window.analytics.startTrackerWithId('UA-68533977-1');
+    
+    window.analytics.trackView('Homepage');
+
 }, false);
 
 $.when(jqueryReady, cordovaReady).done(function () {
