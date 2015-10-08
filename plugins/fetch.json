@@ -1,107 +1,62 @@
 {
-    "cordova-plugin-vibration": {
+    "phonegap-plugin-barcodescanner": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git",
+            "url": "https://github.com/wildabeast/BarcodeScanner.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-splashscreen": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-geolocation": {
+    "cordova-plugin-camera": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-globalization": {
+    "cordova-plugin-dialogs": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-media": {
+    "cordova-plugin-device-motion": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-media-capture": {
+    "cordova-plugin-network-information": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git",
             "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-file-transfer": {
+    "cordova-plugin-battery-status": {
         "source": {
             "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-contacts": {
-        "source": {
-            "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-device-orientation": {
-        "source": {
-            "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-google-analytics": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/danwilson/google-analytics-plugin.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-console": {
-        "source": {
-            "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-device": {
-        "source": {
-            "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git",
             "subdir": "."
         },
         "is_top_level": true,

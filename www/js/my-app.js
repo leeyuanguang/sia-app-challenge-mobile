@@ -17,7 +17,6 @@ var rightView = myApp.addView('.view-right', {
 
 // Login events 
 myApp.onPageInit('login', function (page) {
-    window.analytics.trackView('login');
     $$(page.container).find('.button').on('click', function () {
         var username = $$(page.container).find('input[name="username"]').val();
         var password = $$(page.container).find('input[name="password"]').val();
@@ -353,9 +352,6 @@ $(function () {
 });
 document.addEventListener("deviceready", function () {
     cordovaReady.resolve();
-    window.analytics.startTrackerWithId('UA-68533977-1');
-    
-    window.analytics.trackView('Homepage');
 
 }, false);
 
