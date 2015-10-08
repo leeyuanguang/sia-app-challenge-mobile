@@ -120,15 +120,6 @@ myApp.onPageInit('inflight-menu', function (page) {
     });
 });
 
-myApp.onPageInit('krisair-beauty-detail', function (page) {
-    $$('.inflight-order-prompt').on('click', function () {
-        myApp.showIndicator();
-        setTimeout(function () {
-            myApp.hideIndicator();
-        }, 500);
-    });
-});
-
 /* ===== Messages Page ===== */
 myApp.onPageInit('messages', function (page) {
     var conversationStarted = false;
@@ -282,6 +273,13 @@ myApp.onPageInit('krisair-category-listing', function (page) {
         setTimeout(function () {
             myApp.closeNotification(".cart-notification");
         }, 3000);
+    });
+    
+    $$('.checkout-press').on('click', function () {
+        myApp.showIndicator();
+        setTimeout(function () {
+            myApp.hideIndicator();
+        }, 3500);
     });
 });
 
