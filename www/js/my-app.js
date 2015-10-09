@@ -277,7 +277,7 @@ myApp.onPageInit('krisair-category-listing', function (page) {
     });
 
     $$('.checkout-press').on('click', function () {
-        //cordova.InAppBrowser.open('http://masterpassjava.mybluemix.net', '_self', 'location=no');
+        cordova.InAppBrowser.open('http://masterpassjava.mybluemix.net', '_self', 'location=no');
         myApp.showIndicator();
         setTimeout(function () {
             myApp.closePanel();
