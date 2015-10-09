@@ -17,6 +17,7 @@ var rightView = myApp.addView('.view-right', {
 
 // Login events 
 myApp.onPageInit('login', function (page) {
+    //cordova.plugins.googleAnalytics.trackView('login');
     $$(page.container).find('.button').on('click', function () {
         var username = $$(page.container).find('input[name="username"]').val();
         var password = $$(page.container).find('input[name="password"]').val();
@@ -276,10 +277,13 @@ myApp.onPageInit('krisair-category-listing', function (page) {
     });
 
     $$('.checkout-press').on('click', function () {
+        //cordova.InAppBrowser.open('http://masterpassjava.mybluemix.net', '_self', 'location=no');
         myApp.showIndicator();
         setTimeout(function () {
+            myApp.closePanel();
             myApp.hideIndicator();
-        }, 3500);
+            mainView.router.loadPage("krisair-menu.html")
+        }, 500);
     });
 });
 
@@ -352,7 +356,7 @@ $(function () {
 });
 document.addEventListener("deviceready", function () {
     cordovaReady.resolve();
-
+    cordova.plugins.googleAnalytics.startTrackerWithId('UA-68533977-1');
 }, false);
 
 $.when(jqueryReady, cordovaReady).done(function () {
@@ -362,23 +366,22 @@ $.when(jqueryReady, cordovaReady).done(function () {
                     qrCodeResult = result.text;
                     var found = false;
                     if (qrCodeResult != "") {
-//                        if (qrCodeResult == "siaappchallenge") {
-//                        myApp.addNotification({
-//                            additionalClass: "qr-notification",
-//                            message: 'QR code recognized'
-//                        });
-//                        setTimeout(function () {
-//                            myApp.closeNotification(".qr-notification");
-//                        }, 3000);
-//                        mainView.router.loadPage("krisair_f1collectibles_earpiece.html");
+                        myApp.addNotification({
+                            additionalClass: "qr-notification",
+                            message: 'QR code recognized'
+                        });
+                        mainView.router.loadPage("krisair_f1collectibles_earpiece.html");
+                        setTimeout(function () {
+                            myApp.closeNotification(".qr-notification");
+                        }, 3000);
                     } else {
-//                        myApp.addNotification({
-//                            additionalClass: "qr-notification",
-//                            message: 'QR code not recognized'
-//                        });
-//                        setTimeout(function () {
-//                            myApp.closeNotification(".qr-notification");
-//                        }, 3000);
+                        myApp.addNotification({
+                            additionalClass: "qr-notification",
+                            message: 'QR code not recognized'
+                        });
+                        setTimeout(function () {
+                            myApp.closeNotification(".qr-notification");
+                        }, 3000);
                     }
                 },
                 function (error) {
