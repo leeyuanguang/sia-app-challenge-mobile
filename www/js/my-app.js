@@ -277,13 +277,33 @@ myApp.onPageInit('krisair-category-listing', function (page) {
     });
 
     $$('.checkout-press').on('click', function () {
-        cordova.InAppBrowser.open('http://masterpassjava.mybluemix.net', '_self', 'location=no');
+        //cordova.InAppBrowser.open('http://masterpassjava.mybluemix.net', '_self', 'location=no');
         myApp.showIndicator();
         setTimeout(function () {
             myApp.closePanel();
             myApp.hideIndicator();
-            mainView.router.loadPage("krisair-menu.html")
+            mainView.router.loadPage("krisair-cart-submit.html")
         }, 500);
+    });
+});
+
+myApp.onPageInit('submit-cart', function (page) {
+    myApp.showPreloader('Submitting Cart');
+    setTimeout(function () {
+        mainView.router.loadPage("krisair-cart-confirm.html");
+    }, 1500);
+    setTimeout(function () {
+        myApp.hidePreloader();
+    }, 1700);
+});
+
+myApp.onPageInit('confirm-cart', function (page) {
+    $$('.confirm-checkout').on('click', function () {
+        myApp.showPreloader('Submitting Order...');
+        setTimeout(function () {
+            mainView.router.loadPage("krisair-cart-success.html");
+            myApp.hidePreloader();
+        }, 2000);
     });
 });
 
